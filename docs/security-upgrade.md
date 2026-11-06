@@ -22,3 +22,7 @@ The build machine uses Node.js 24; CI uses the documented Node.js 22 environment
 ## Production boundary
 
 Namecheap serves static HTML/CSS/JavaScript plus `contact.php`; no Next.js Node server is exposed. The rebuilt static export is the production release artifact. Private enquiry storage and mail configuration are separate from the framework upgrade. Enquiry success confirms private persistence, not notification delivery. Mailbox provisioning was pending at the original handoff.
+
+## Deployment verification
+
+The rebuilt export was deployed after backing up the previous document root. The existing PHP endpoint and Apache configuration matched the staged versions before replacement. The live form returned the expected acknowledgement for a clearly labeled test enquiry; its private JSON record was confirmed with directory mode `0700` and file mode `0600`. Notification delivery was not claimed or verified. GitHub CI passed the patched build, export checks, PHP syntax check, and the new dependency-audit step.
