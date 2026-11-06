@@ -18,6 +18,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: pnpm audit --audit-level low
       - run: pnpm build
       - run: pnpm test
       - run: php -l public/contact.php
