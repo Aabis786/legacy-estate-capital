@@ -75,7 +75,7 @@ An enquiry success response means a private record was saved. It does not prove 
 
 The logo uses the owner's original raster artwork inside SVG viewports. A color-to-alpha filter removes its cream background. A dedicated transparent vector asset would be a cleaner future replacement.
 
-The repository-preparation build emitted a Next.js security-upgrade warning. See the [dependency advisory](docs/architecture.md#dependency-advisory-at-repository-preparation) before using this snapshot for a new deployment.
+Next.js was patched to 16.4.5 on November 6, 2026. The production build and export smoke checks pass, and the dependency audit reported no known vulnerabilities at verification time. See the [security upgrade record](docs/security-upgrade.md) for scope and evidence.
 
 ## Rights
 
