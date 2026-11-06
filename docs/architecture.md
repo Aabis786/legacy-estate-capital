@@ -47,6 +47,6 @@ CI installs from the lockfile, builds the static export, verifies required pages
 - Move lead processing to a monitored datastore/queue if volume justifies it.
 - Add retention and deletion procedures matched to actual business operations.
 
-## Dependency advisory at repository preparation
+## Dependency security maintenance
 
-The November 6, 2026 local build emitted a security-upgrade warning for the pinned Next.js version. The build and export smoke checks completed, but no dependency security clearance is claimed. Review and upgrade the dependency before further production releases. This repository preparation does not change the deployed website. PHP syntax validation runs in CI; PHP was not available on the preparation machine.
+The initial repository snapshot pinned Next.js 16.4.0. It was upgraded to 16.4.5 on November 6, 2026 following the maintainer advisories. See [the verification record](security-upgrade.md). Production serves exported static files and PHP; it does not run the Next.js server runtime. Dependency audits remain point-in-time checks, not a guarantee against future findings.
